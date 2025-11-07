@@ -145,6 +145,44 @@ sqlite3 - встроенная библиотека Python для работы �
 logging - для логирования операций с базой данных
 datetime - для работы с временными метками
 
+Демонстрация работы:
+С лабораторной 1:
+Команда /contacts - Контакты коллег:
+<img width="873" height="1352" alt="image" src="https://github.com/user-attachments/assets/2be1d883-80a2-462b-9c90-ba1cd5756e2f" />
+Команда /events - Акции и события:
+<img width="994" height="953" alt="image" src="https://github.com/user-attachments/assets/a4c44cfa-c63f-432f-9fd3-6df5a89bfe92" />
+Команда /products - Наши товары:
+<img width="976" height="1169" alt="image" src="https://github.com/user-attachments/assets/02987847-2fca-429b-b7c9-3e016bf6b738" />
+Команда /digest - Ежедневный дайджест:
+<img width="1016" height="736" alt="image" src="https://github.com/user-attachments/assets/5463281f-8100-4b39-94fe-37b860b03594" />
+Команда /about - О компании:
+<img width="995" height="1022" alt="image" src="https://github.com/user-attachments/assets/377fd301-2d76-4722-ae64-5583e67655b7" />
+
+С лабораторной 2:
+Команда /start - Начало работы:
+<img width="978" height="1057" alt="image" src="https://github.com/user-attachments/assets/43f7d087-3dd8-4af9-aa98-b98d4f88c199" />
+Команда /help - Помощь и список команд:
+<img width="756" height="1038" alt="image" src="https://github.com/user-attachments/assets/c7413717-f7fc-404a-b308-b01bf54e4fce" />
+Команда /stats - Статистика бота и заказов:
+<img width="800" height="762" alt="image" src="https://github.com/user-attachments/assets/a012aa8c-a42d-443a-96ab-400e0c6bcad2" />
+Команда /my_requests - История ваших запросов:
+<img width="617" height="988" alt="image" src="https://github.com/user-attachments/assets/9f7874ea-7eff-4391-8cea-c5c6c61e57ab" />
+Команда /add_order - Добавить новый заказ:
+<img width="977" height="1303" alt="image" src="https://github.com/user-attachments/assets/fa0427cd-6ed4-4aa5-a812-372ff2daa173" />
+Команда /orders - Список всех заказов:
+<img width="984" height="878" alt="image" src="https://github.com/user-attachments/assets/b3810063-3d0d-4a91-a71f-f015d8925cb5" />
+Команда /order - Детали заказа (например: /order 1):
+<img width="674" height="951" alt="image" src="https://github.com/user-attachments/assets/ae750e7f-f978-465a-b458-908284154373" />
+Команда /tasks - Задачи команды:
+<img width="802" height="565" alt="image" src="https://github.com/user-attachments/assets/f74dbea1-de20-4e95-b674-65e2a7a8793c" />
+Команда /add_test_task - Добавить тестовую задачу:
+<img width="974" height="426" alt="image" src="https://github.com/user-attachments/assets/f27496a3-3bd1-456c-ac76-e5c5a58de6d6" />
+Команда /debug - Отладочная информация:
+<img width="668" height="681" alt="image" src="https://github.com/user-attachments/assets/aeb57cf0-c146-418e-85c0-15ac26394729" />
+Созданный БД файл:
+<img width="1821" height="969" alt="image" src="https://github.com/user-attachments/assets/e6a6f6ca-94dc-4889-bdda-5f637c8de83d" />
+
+
 Трудности и решения
 Проблема 1: Ошибки импорта базы данных
 Проблема: Команды БД не работали, выдавая ошибки импорта
