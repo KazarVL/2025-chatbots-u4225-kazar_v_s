@@ -1,3 +1,4 @@
+University: ITMO University Faculty: FICT Course: Vibe Coding: AI-боты для бизнеса Year: 2025/2026 Group: u4225 Author: Kazar Vladimir Sergeevich Lab: Lab1 Date of create: 25.10.2025 Date of finished: 04.11.2025
 
 Отчет по лабораторной работе: GameBoard.Bot
 Описание задачи
