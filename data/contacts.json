@@ -1,0 +1,32 @@
+{
+  "Казар Владимир": {
+    "position": "Программист",
+    "phone": "Уточнять в Telegram",
+    "email": "gamebored@yandex.ru",
+    "comment": "Отвечает за поддержку сайта и ТГ бота"
+  },
+  "Беляевская Виктория": {
+    "position": "Дизайнер",
+    "phone": "Уточнять в Telegram",
+    "email": "gamebored@yandex.ru",
+    "comment": "Отвечает за создание персонализированных игр"
+  },
+  "Степанов Денис": {
+    "position": "Печать",
+    "phone": "Уточнять в Telegram",
+    "email": "gamebored@yandex.ru",
+    "comment": "Отвечает за качество печати"
+  },
+  "Ширяева Валерия": {
+    "position": "Менеджер по продажам",
+    "phone": "Уточнять в Telegram",
+    "email": "gamebored@yandex.ru",
+    "comment": "Основной контакт для заказов и консультаций"
+  },
+  "Тенишев Ринат": {
+    "position": "Менеджер по продажам",
+    "phone": "Уточнять в Telegram",
+    "email": "gamebored@yandex.ru",
+    "comment": "CEO компании"
+  }
+}
