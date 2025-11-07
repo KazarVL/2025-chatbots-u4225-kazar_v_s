@@ -82,6 +82,24 @@ JSON файлы - простота использования, не требую
 python-dotenv - безопасное хранение токена бота
 Git - стандарт для контроля версий в разработке
 
+Демонстрация работы:
+Команда /start - Начало работы:
+<img width="894" height="889" alt="image" src="https://github.com/user-attachments/assets/1ece1c21-0942-4ab0-a379-1dfadb138ab9" />
+Команда /help - Помощь и список команд:
+<img width="1041" height="1817" alt="image" src="https://github.com/user-attachments/assets/e57d26df-c4c1-4e10-9855-ac6449b17865" />
+Команда /contacts - Контакты коллег:
+<img width="873" height="1352" alt="image" src="https://github.com/user-attachments/assets/2be1d883-80a2-462b-9c90-ba1cd5756e2f" />
+Команда /events - Акции и события:
+<img width="994" height="953" alt="image" src="https://github.com/user-attachments/assets/a4c44cfa-c63f-432f-9fd3-6df5a89bfe92" />
+Команда /products - Наши товары:
+<img width="976" height="1169" alt="image" src="https://github.com/user-attachments/assets/02987847-2fca-429b-b7c9-3e016bf6b738" />
+Команда /digest - Ежедневный дайджест:
+<img width="1016" height="736" alt="image" src="https://github.com/user-attachments/assets/5463281f-8100-4b39-94fe-37b860b03594" />
+Команда /about - О компании:
+<img width="995" height="1022" alt="image" src="https://github.com/user-attachments/assets/377fd301-2d76-4722-ae64-5583e67655b7" />
+Команда /debug - Отладочная информация:
+<img width="625" height="802" alt="image" src="https://github.com/user-attachments/assets/3e4a179d-25ce-438c-bb22-c595da4af0e9" />
+
 
 Трудности и решения
 Проблема 1: Ошибка создания файлов в Windows
