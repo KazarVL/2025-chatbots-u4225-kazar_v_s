@@ -98,6 +98,7 @@ Git - стандарт для контроля версий в разработ�
 Команда /about - О компании:
 <img width="995" height="1022" alt="image" src="https://github.com/user-attachments/assets/377fd301-2d76-4722-ae64-5583e67655b7" />
 Команда /debug - Отладочная информация:
+
 <img width="625" height="802" alt="image" src="https://github.com/user-attachments/assets/3e4a179d-25ce-438c-bb22-c595da4af0e9" />
 
 
