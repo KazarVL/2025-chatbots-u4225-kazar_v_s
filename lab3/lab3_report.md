@@ -8,6 +8,8 @@ Lab: Lab2
 Date of create: 25.10.2025
 Date of finished: 04.11.2025
 
+- URL бота: @itmoftmi_GameBored_bot
+
 Отчет по деплою Telegram бота GameBored
 1. Описание деплоя
 Выбранный способ: Docker + VPS (Selected)
