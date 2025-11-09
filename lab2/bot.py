@@ -120,6 +120,8 @@ def send_help(message):
 /add_order - Добавить новый заказ
 /orders - Список всех заказов
 /order - Детали заказа (например: /order 1)
+/find_order - Поиск заказов по клиенту  🆕
+/recent_orders - Свежие заказы (7 дней)  🆕
 /tasks - Задачи команды
 /add_test_task - Добавить тестовую задачу
 
@@ -189,6 +191,108 @@ def send_events(message):
     except Exception as e:
         logger.error(f"Error in events command: {e}")
         bot.reply_to(message, "❌ Ошибка при загрузке событий.")
+@bot.message_handler(commands=['find_order'])
+def find_order(message):
+    """Поиск заказов по имени клиента"""
+    if not DB_AVAILABLE:
+        bot.reply_to(message, "❌ База данных временно недоступна")
+        return
+
+    args = message.text.split()[1:]
+    if not args:
+        bot.reply_to(message,
+            "🔍 **Поиск заказов по клиенту**\n\n"
+            "📝 **Использование:**\n"
+            "`/find_order [имя_клиента]`\n\n"
+            "💡 **Примеры:**\n"
+            "`/find_order Иван`\n"
+            "`/find_order Петров`\n"
+            "`/find_order Мария`"
+        )
+        return
+
+    try:
+        customer_name = ' '.join(args)
+        orders = db.find_orders_by_customer(customer_name)
+
+        if not orders:
+            bot.reply_to(message, f"🔍 Заказы для клиента '{customer_name}' не найдены")
+            return
+
+        response = f"🔍 **Найдено заказов для '{customer_name}': {len(orders)}**\n\n"
+        
+        for order in orders[:10]:  # Ограничиваем вывод
+            order_id, cust_name, product, quantity, price, status, created_at, notes = order
+            
+            status_icons = {'новый': '🟡', 'в работе': '🟠', 'выполнен': '🟢', 'отменен': '🔴'}
+            
+            response += f"{status_icons.get(status, '⚪')} **Заказ #{order_id}**\n"
+            response += f"👤 **{cust_name}**\n"
+            response += f"🛍️ {product} (x{quantity})\n"
+            response += f"💰 {price} руб.\n"
+            response += f"📅 {created_at[:16]}\n"
+            if notes:
+                response += f"📝 {notes}\n"
+            response += "\n"
+
+        if len(orders) > 10:
+            response += f"💡 Показано 10 из {len(orders)} заказов\n"
+
+        bot.reply_to(message, response)
+        db.log_request(message.from_user.id, f"/find_order {customer_name}", 
+                       f"Найдено {len(orders)} заказов", "find_order")
+
+    except Exception as e:
+        logger.error(f"Error in find_order command: {e}")
+        bot.reply_to(message, "❌ Произошла ошибка при поиске заказов")
+@bot.message_handler(commands=['recent_orders'])
+def recent_orders(message):
+    """Показать свежие заказы (за последние 7 дней)"""
+    if not DB_AVAILABLE:
+        bot.reply_to(message, "❌ База данных временно недоступна")
+        return
+
+    try:
+        # Заказы за последние 7 дней
+        from datetime import datetime, timedelta
+        week_ago = datetime.now() - timedelta(days=7)
+
+        orders = db.get_orders_since(week_ago)
+
+        if not orders:
+            bot.reply_to(message,
+                "📅 **Свежие заказы**\n\n"
+                "За последние 7 дней заказов нет.\n\n"
+                "💡 Используйте `/add_order` чтобы добавить новый заказ!"
+            )
+            return
+
+        response = f"📅 **Свежие заказы (последние 7 дней): {len(orders)}**\n\n"
+        
+        for order in orders[:15]:  # Ограничиваем вывод
+            order_id, cust_name, product, quantity, price, status, created_at, notes = order
+            
+            status_icons = {'новый': '🟡', 'в работе': '🟠', 'выполнен': '🟢', 'отменен': '🔴'}
+            
+            response += f"{status_icons.get(status, '⚪')} **Заказ #{order_id}**\n"
+            response += f"👤 **{cust_name}**\n"
+            response += f"🛍️ {product} (x{quantity})\n"
+            response += f"💰 {price} руб.\n"
+            response += f"📅 {created_at[:16]}\n"
+            if notes:
+                response += f"📝 {notes}\n"
+            response += "\n"
+
+        if len(orders) > 15:
+            response += f"💡 Показано 15 из {len(orders)} заказов\n"
+
+        bot.reply_to(message, response)
+        db.log_request(message.from_user.id, "/recent_orders", 
+                       f"Показано {len(orders)} заказов", "recent_orders")
+
+    except Exception as e:
+        logger.error(f"Error in recent_orders command: {e}")
+        bot.reply_to(message, "❌ Произошла ошибка при получении заказов")
 
 @bot.message_handler(commands=['products'])
 def send_products(message):
