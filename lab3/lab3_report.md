@@ -51,6 +51,7 @@ docker-compose up -d --build
 15+ запросов к базе данных
 
 Скриншоты отзывов:
+
 <img width="436" height="109" alt="image" src="https://github.com/user-attachments/assets/08b0aa2b-610e-4db1-a186-edde977838cb" />
 <img width="469" height="93" alt="image" src="https://github.com/user-attachments/assets/b7845d17-ce20-408d-8403-365225d70714" />
 <img width="435" height="88" alt="image" src="https://github.com/user-attachments/assets/6fd9859e-e26c-460c-9ead-d5570da20c20" />
