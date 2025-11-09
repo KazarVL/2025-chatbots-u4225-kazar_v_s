@@ -75,21 +75,21 @@ docker-compose up -d --build
 
 5. Улучшения
 Реализованные улучшения:
-1. Улучшенная валидация /add_order
-# Добавлены подсказки при ошибках
+1) Улучшенная валидация /add_order
+Добавлены подсказки при ошибках
 if len(args) < 3:
     help_text = "❌ Неверный формат!\\n✅ Используйте: /add_order [клиент] [товар] [количество]"
     bot.reply_to(message, help_text)
     return
-2. Команда поиска /find_order
+2) Команда поиска /find_order
 @bot.message_handler(commands=['find_order'])
 def find_order(message):
-    # Поиск заказов по имени клиента
+    (Поиск заказов по имени клиента)
     orders = db.find_orders_by_customer(customer_name)
 3. Команда /recent_orders
 @bot.message_handler(commands=['recent_orders'])
 def recent_orders(message):
-    # Показ заказов за последние 7 дней
+    (Показ заказов за последние 7 дней)
     orders = db.get_orders_since(week_ago)
 
 Демонстрация улучшений: 
