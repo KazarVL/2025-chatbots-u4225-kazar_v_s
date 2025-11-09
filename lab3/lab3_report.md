@@ -94,6 +94,7 @@ def recent_orders(message):
 
 Демонстрация улучшений: 
 Улучшенная валидация /add_order
+
 <img width="409" height="251" alt="image" src="https://github.com/user-attachments/assets/7374e73e-fab4-49cb-a0de-f1effb3aaf5b" />
 
 Команда поиска /find_order
