@@ -94,13 +94,13 @@ def recent_orders(message):
 
 Демонстрация улучшений: 
 Улучшенная валидация /add_order
-<img width="764" height="362" alt="image" src="https://github.com/user-attachments/assets/14de7a45-43e1-429f-b9cd-57d4cd7a6826" />
+<img width="409" height="251" alt="image" src="https://github.com/user-attachments/assets/7374e73e-fab4-49cb-a0de-f1effb3aaf5b" />
 
 Команда поиска /find_order
-<img width="731" height="626" alt="image" src="https://github.com/user-attachments/assets/9b38f1d1-7910-4e71-bbe4-5688af741eb5" />
+<img width="241" height="257" alt="image" src="https://github.com/user-attachments/assets/4bbfb819-e17c-4ae8-92ba-7c10d8888f07" />
 
 Команда /recent_orders
-<img width="726" height="354" alt="image" src="https://github.com/user-attachments/assets/84fe26fc-d22e-4e56-963c-7892397842c1" />
+<img width="284" height="257" alt="image" src="https://github.com/user-attachments/assets/29d087d3-ad3b-45df-bd9e-4ae0317032d0" />
 
 
 Результаты улучшений:
